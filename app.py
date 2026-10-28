@@ -5,6 +5,17 @@ def encrypt_message(message: bytes) -> bytes:
     cipher = Fernet(key)
     return cipher.encrypt(message)
 
+def decrypt_message(encrypted_message: bytes, key: bytes) -> bytes:
+    cipher = Fernet(key)
+    return cipher.decrypt(encrypted_message)
+
 if __name__ == "__main__":
-    encrypted = encrypt_message(b"RelixQ dependency scan test")
-    print("Encryption completed")
+    key = Fernet.generate_key()
+    cipher = Fernet(key)
+
+    message = b"Testing RelixQ webhook-triggered scans"
+    encrypted = cipher.encrypt(message)
+    decrypted = cipher.decrypt(encrypted)
+
+    print("Encryption and decryption completed")
+    print(decrypted.decode())
