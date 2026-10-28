@@ -14,5 +14,4 @@ if __name__ == "__main__":
     message = b"Testing RelixQ webhook-triggered scans"
     encrypted = cipher.encrypt(message)
     decrypted = cipher.decrypt(encrypted)
-    print("Decryption completed")
     print(decrypted.decode())
