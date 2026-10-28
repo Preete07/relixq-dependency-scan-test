@@ -15,5 +15,4 @@ if __name__ == "__main__":
     encrypted = cipher.encrypt(message)
     decrypted = cipher.decrypt(encrypted)
     print("Decryption completed")
-    print("Ecryption completed")
     print(decrypted.decode())
