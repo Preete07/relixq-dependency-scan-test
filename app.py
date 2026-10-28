@@ -17,5 +17,3 @@ if __name__ == "__main__":
     print("Encryption completed")
     print("Decryption completed")
     print(decrypted.decode())
-    print("Encryption completed")
-    print("Decryption completed")
